@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "bulma/css/bulma.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/js/all";
+import RoutesBasic from "./routes/RoutesBasic";
+import Axios from "axios";
+
+Axios.interceptors.request.use(function (config) {
+  config.url = `${process.env.REACT_APP_API_BASE_URL}${config.url}`;
+  return config;
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <RoutesBasic />
+    </>
   );
 }
 

@@ -1,0 +1,5 @@
+export const OBTENER_POSTS = "OBTENER_POSTS";
+export const REGISTRAR_POST = "REGISTRAR_POST";
+export const OBTENER_POST = "OBTENER_POST";
+export const MODIFICAR_POST = "MODIFICAR_POST";
+export const ELIMINAR_POST = "ELIMINAR_POST";
